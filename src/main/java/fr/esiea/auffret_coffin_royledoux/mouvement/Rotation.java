@@ -10,15 +10,12 @@ public class Rotation {
 				if(i==3){
 					i=0;
 					p.forme = p.position.get(i);
-					System.out.println("1NONNN+++++++++++"+i);
 					break;
 				}else{
 					p.forme = p.position.get(i+1);
-					System.out.println("1OUIIII+++++++++++"+(i+1));
 					break;
 				}
 			}
-			
 		}
 	}
 	
@@ -28,11 +25,9 @@ public class Rotation {
 				if(i==0){
 					i=3;
 					p.forme = p.position.get(i);
-					System.out.println("2NONNN--------"+i);
 					break;
 				}else{
 					p.forme = p.position.get(i-1);
-					System.out.println("2OUIIII---------"+(i-1));
 					break;
 				}
 			}

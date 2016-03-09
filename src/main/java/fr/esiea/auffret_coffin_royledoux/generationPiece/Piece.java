@@ -12,22 +12,22 @@ public class Piece {
 	public List<int[][]> position = new ArrayList<int[][]>();
 
 	public int[][] forme = new int[4][4];
-	int positionInitialX, positionInitialY;
+	int positionX, positionY;
 
-	public void setPositionInitialX(int x){
-		this.positionInitialX = x;
+	public void setPositionX(int x){
+		this.positionX = x;
 	}
 	
-	public int getPositionInitialX(){
-		return this.positionInitialX;
+	public int getPositionX(){
+		return this.positionX;
 	}
 	
-	public void setPositionInitialY(int y){
-		this.positionInitialY = y;
+	public void setPositionY(int y){
+		this.positionY = y;
 	}
 	
-	public int getPositionInitialY(){
-		return this.positionInitialY;
+	public int getPositionY(){
+		return this.positionY;
 	}
 	
 	public void creerBarre(){
