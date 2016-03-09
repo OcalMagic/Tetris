@@ -1,7 +1,5 @@
 package fr.esiea.auffret_coffin_royledoux.mouvement;
 
-import java.util.ListIterator;
-
 import fr.esiea.auffret_coffin_royledoux.generationPiece.Piece;
 
 public class Rotation {
