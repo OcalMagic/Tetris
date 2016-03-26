@@ -4,16 +4,15 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Piece {
+	protected List<int[][]> position = new ArrayList<int[][]>() ;
+	private int forme[][];
+	private int positionX, positionY;
 
-	int[][] position0 = null;
-	int[][] position1 = null;
-	int[][] position2 = null;
-	int[][] position3 = null;
-	public List<int[][]> position = new ArrayList<int[][]>();
-
-	public int[][] forme = new int[4][4];
-	int positionX, positionY;
-
+	Piece (int x , int y){
+		this.positionX = x;
+		this.positionY = y;
+		}
+	
 	public void setPositionX(int x){
 		this.positionX = x;
 	}
@@ -29,22 +28,17 @@ public class Piece {
 	public int getPositionY(){
 		return this.positionY;
 	}
-	
-	public void creerBarre(){
-		position.add(position0 = new int[][]{{0,1,0,0},{0,1,0,0},{0,1,0,0},{0,1,0,0}});
-		position.add(position1 = new int[][]{{1,1,1,1},{0,0,0,0},{0,0,0,0},{0,0,0,0}});
-		position.add(position2 = new int[][]{{0,1,0,0},{0,1,0,0},{0,1,0,0},{0,1,0,0}});
-		position.add(position3 = new int[][]{{1,1,1,1},{0,0,0,0},{0,0,0,0},{0,0,0,0}});
-		forme = position0;
-	}
-	
-	public void creerCube() {
-		position.add(position0 = new int[][]{{0,1,1,0},{0,1,1,0},{0,0,0,0},{0,0,0,0}});
-		position.add(position1 = new int[][]{{0,1,1,0},{0,1,1,0},{0,0,0,0},{0,0,0,0}});
-		position.add(position2 = new int[][]{{0,1,1,0},{0,1,1,0},{0,0,0,0},{0,0,0,0}});
-		position.add(position3 = new int[][]{{0,1,1,0},{0,1,1,0},{0,0,0,0},{0,0,0,0}});
-		forme = position0;
+
+	public List<int[][]> getPosition() {
+		return position;
 	}
 
+	public int[][] getForme() {
+		return forme;
+	}
 
+	public void setForme(int[][] forme2) {
+		this.forme = forme2;
+	}
+	
 }
