@@ -13,15 +13,15 @@ public class Deplacement {
 	}
 	*/
 	
-	public void descendre(Piece p){
+	public static void descendre(Piece p){
 		p.setPositionY(p.getPositionY()-1);
 	}
 	
-	public void droite(Piece p){
+	public static void droite(Piece p){
 		p.setPositionX(p.getPositionX()+1);
 	}
 	
-	public void gauche(Piece p){
+	public static void gauche(Piece p){
 		p.setPositionX(p.getPositionX()-1);
 	}
 	

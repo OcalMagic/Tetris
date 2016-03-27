@@ -4,7 +4,7 @@ import fr.esiea.auffret_coffin_royledoux.generationPiece.Piece;
 
 public class Rotation {
 
-	public void horaire(Piece p){
+	public static void horaire(Piece p){
 		for(int i = 0 ; i<4 ; i++){
 			if(p.getForme() == p.getPosition().get(i) ){
 				if(i==3){
@@ -19,7 +19,7 @@ public class Rotation {
 		}
 	}
 	
-	public void antiHoraire(Piece p){
+	public static void antiHoraire(Piece p){
 		for(int i = 0 ; i<4 ; i++){
 			if(p.getForme() == p.getPosition().get(i) ){
 				if(i==0){

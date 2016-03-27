@@ -9,9 +9,9 @@ public class Plateau {
 	public static int tableau[][] = new int[hauteur][largeur];
 
 	public void aLInterieur(Piece p){
-		if(p.getPositionX() < 0) p.setPositionX(0);
-		if(p.getPositionX() >= largeur) p.setPositionX(largeur-1);
-		if(p.getPositionY() < 0) p.setPositionY(0);
-		if(p.getPositionY() >= hauteur) p.setPositionY(hauteur-1);
+		if(p.getPositionX() < 0) { p.setPositionX(0); }
+		if(p.getPositionX() >= largeur) { p.setPositionX(largeur-1); }
+		if(p.getPositionY() < 0) { p.setPositionY(0); }
+		if(p.getPositionY() >= hauteur) { p.setPositionY(hauteur-1); }
 	}
 }
