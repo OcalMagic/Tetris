@@ -1,5 +1,10 @@
 package fr.esiea.auffret_coffin_royledoux.affichage;
 
+
+/*
+ * Classe ephemere pour afficher dans la console
+ */
+
 public class Printer {
 	
 	public Printer(int[][] tab){

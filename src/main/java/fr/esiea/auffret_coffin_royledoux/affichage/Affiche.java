@@ -1,13 +1,14 @@
 package fr.esiea.auffret_coffin_royledoux.affichage;
 
+import java.awt.*;
 import javax.swing.*;
 
 public class Affiche {
+	
+	Fenetre frame = new Fenetre();
 
-	JFrame frame = new JFrame();
-	
-	JPanel terrain = new JPanel();
-	JPanel menu = new JPanel();
-	
+	public Affiche(){
+		frame.setVisible(true);
+	}
 	
 }
