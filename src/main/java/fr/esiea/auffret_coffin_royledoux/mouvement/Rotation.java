@@ -1,47 +1,33 @@
 package fr.esiea.auffret_coffin_royledoux.mouvement;
 
-import java.util.ListIterator;
-
 import fr.esiea.auffret_coffin_royledoux.generationPiece.Piece;
 
 public class Rotation {
 
-	public void horaire(Piece p){
-		//ListIterator<int[][]> li = p.position.listIterator();
-
-		for(int i = 0 ; i<p.position.size() ; i++){
-			if(p.forme == p.position.get(i) ){
-				if(i != (p.position.size()-1)){
-					p.forme = p.position.get(i++);
-					System.out.println("1OUIIII+++++++++++"+i);
-					break;
-
-				}else{
+	public static void horaire(Piece p){
+		for(int i = 0 ; i<4 ; i++){
+			if(p.getForme() == p.getPosition().get(i) ){
+				if(i==3){
 					i=0;
-					p.forme = p.position.get(i);
-					System.out.println("1NONNN+++++++++++"+i);
+					p.setForme(p.getPosition().get(i));
+					break;
+				}else{
+					p.setForme(p.getPosition().get(i+1));
 					break;
 				}
 			}
-			
 		}
 	}
 	
-	public void antiHoraire(Piece p){
-		//ListIterator<int[][]> li = p.position.listIterator();
-
-		for(int i = 0 ; i<p.position.size() ; i++){
-
-			if(p.forme == p.position.get(i) ){
-				if(i != 0){
-					p.forme = p.position.get(i--);
-					System.out.println("2OUIIII---------"+i);
+	public static void antiHoraire(Piece p){
+		for(int i = 0 ; i<4 ; i++){
+			if(p.getForme() == p.getPosition().get(i) ){
+				if(i==0){
+					i=3;
+					p.setForme(p.getPosition().get(i));
 					break;
-
 				}else{
-					i=(p.position.size()-1);
-					p.forme = p.position.get(i);
-					System.out.println("2NONNN--------"+i);
+					p.setForme(p.getPosition().get(i-1));
 					break;
 				}
 			}
