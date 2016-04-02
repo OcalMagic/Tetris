@@ -1,6 +1,6 @@
 package fr.esiea.auffret_coffin_royledoux.generationPiece;
 
-public class Barre extends Piece {
+class Barre extends Piece {
 	
 	private int[][] position0 = new int[][]{{0,1,0,0},{0,1,0,0},{0,1,0,0},{0,1,0,0}};
 	private int[][] position1 = new int[][]{{1,1,1,1},{0,0,0,0},{0,0,0,0},{0,0,0,0}};

@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.esiea.auffret_coffin_royledoux.affichage.Affiche;
 import fr.esiea.auffret_coffin_royledoux.affichage.Printer;
 import fr.esiea.auffret_coffin_royledoux.generationPiece.Barre;
 import fr.esiea.auffret_coffin_royledoux.generationPiece.Cube;
@@ -10,6 +11,7 @@ import fr.esiea.auffret_coffin_royledoux.mouvement.Deplacement;
 import fr.esiea.auffret_coffin_royledoux.mouvement.Rotation;
 import fr.esiea.auffret_coffin_royledoux.terrain.Plateau;
 
+@SuppressWarnings("unused")
 public class Main {
 
 	public static void main(String[] args) {

@@ -3,15 +3,15 @@ package fr.esiea.auffret_coffin_royledoux.affichage;
 import java.awt.*;
 import javax.swing.*;
 
-import fr.esiea.auffret_coffin_royledoux.terrain.Plateau;
+import fr.esiea.auffret_coffin_royledoux.core.Jeu;
+
 
 class Terrain extends JPanel {
-
+	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
 	Terrain g = new Terrain();
 	
 	protected Terrain(){
@@ -29,8 +29,8 @@ class Terrain extends JPanel {
 	}
 
 	private void TableauVide(Graphics g) {
-		for(int i = 0 ; i < Plateau.hauteur ; i++){
-			for(int j = 0 ; j < Plateau.largeur ; j++){
+		for(int i = 0 ; i < Jeu.getPplateau().getHauteur() ; i++){
+			for(int j = 0 ; j < Jeu.getPplateau().getLargeur() ; j++){
 				g.fillRect(5*i, 5*j, 5, 5);
 			}
 		}
