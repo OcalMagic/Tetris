@@ -8,6 +8,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
+import fr.esiea.auffret_coffin_royledoux.core.Jeu;
+
 class Fenetre extends JFrame {
 
 	/**
@@ -24,10 +26,9 @@ class Fenetre extends JFrame {
 		this.setLocationRelativeTo(null);
 		
 	    
-		JButton boutonScore = new JButton("Scores");
+		JLabel boutonScore = new JLabel(Jeu.getScore());
 		JButton boutonMulti = new JButton("Multijoueurs");
 		
-	    boutonScore.addActionListener(new BoutonScoreListener());
 	    boutonMulti.addActionListener(new BoutonMultiListener());
 	    
 	    boutonScore.setVisible(true);
@@ -43,9 +44,7 @@ class Fenetre extends JFrame {
 	    pan.add(boutonMulti);
 	    
 	    //On définit le layout à utiliser sur le content pane
-	    this.setLayout(new BorderLayout());
-	    
-	    
+	    this.setLayout(new BorderLayout());	    
 	    
 	    this.getContentPane().add(terrain, BorderLayout.CENTER);	    
 	    this.getContentPane().add(pan, BorderLayout.EAST);

@@ -9,6 +9,10 @@ import fr.esiea.auffret_coffin_royledoux.terrain.Plateau;
 public class Jeu {
 
 	Affiche a = new Affiche();
+	static int score = 0;
+	public static String getScore() {
+		return Integer.toString(score);
+	}
 
 	private static Plateau pplateau = new Plateau();
 	public static Piece pieceCourante;
@@ -18,7 +22,6 @@ public class Jeu {
 	
 	public Jeu(){
 		boolean gagner = true;
-		int score = 0;
 
 		int cpt =0;
 		
@@ -27,7 +30,6 @@ public class Jeu {
 			boolean etape = true;
 			boolean stop = true;
 			pieceCourante = PieceFactory.GenerationPiece();
-
 
 			System.out.println(cpt++);
 			while(etape & stop){
@@ -105,6 +107,5 @@ public class Jeu {
 		}
 		return gagner;
 	}
-	
 
 }
