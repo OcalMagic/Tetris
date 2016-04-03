@@ -4,10 +4,11 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import fr.esiea.auffret_coffin_royledoux.generationPiece.Piece;
-import fr.esiea.auffret_coffin_royledoux.mouvement.Deplacement;
 import fr.esiea.auffret_coffin_royledoux.mouvement.Rotation;
+import fr.esiea.auffret_coffin_royledoux.mouvement.Deplacement;
 
-class InterfaceUtilisateur {
+
+public class InterfaceUtilisateur {
 	
 	InterfaceUtilisateur(final Piece piece){
 
