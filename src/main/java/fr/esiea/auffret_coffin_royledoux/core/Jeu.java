@@ -7,23 +7,32 @@ import fr.esiea.auffret_coffin_royledoux.terrain.Plateau;
 
 public class Jeu {
 	
-	public static int score = 0;
-	public static Piece pieceCourante;
-	PieceFactory generationPiece;
+	private static int SCORE = 0;
+	public static int getScore() {
+		return SCORE;
+	}
+
+	public static void setScore(int score) {
+		SCORE = score;
+	}
+
+	private Piece pieceCourante = PieceFactory.GenerationPiece();;
+	public Piece getPieceCourante() {
+		return pieceCourante;
+	}
+
+	private static Plateau pplateau = new Plateau();
 	
 	public Jeu(){
 		boolean gagner = true;
-		
-		// TODO creer une piece
-		piece();
-		
+				
 		while(gagner){
 			
 			// TODO tour suivant
 			Deplacement.descendre(pieceCourante);
 			
 			// TODO ecouter le clavier
-			InterfaceUtilisateur UI = new InterfaceUtilisateur(pieceCourante);
+			new InterfaceUtilisateur(pieceCourante);
 			
 			// TODO collision
 			gagner = collision(gagner);
@@ -34,27 +43,18 @@ public class Jeu {
 
 	}
 	
-	private void piece(){
-		int choixPiece = (int) Math.random()*2;
-
-		switch(choixPiece){
-			case 0 :
-				pieceCourante = generationPiece.Barre();
-				break;
-			case 1 :
-				pieceCourante = generationPiece.Cube();
-				break;
-			default :
-				pieceCourante = generationPiece.Barre();
-				break;
-		}
-	}
 	
 	private boolean collision(boolean gagner){
 		//Si la case de dessous est pleine
-		if(Plateau.tableau[pieceCourante.getPositionY()+1][pieceCourante.getPositionX()] == 1){
+		int[][] tab = getPplateau().getTableau();
+		if(tab[pieceCourante.getPositionY()+1][pieceCourante.getPositionX()] == 1){
 			gagner = false;
 		}
 		return gagner;
 	}
+
+	public static Plateau getPplateau() {
+		return pplateau;
+	}
+
 }

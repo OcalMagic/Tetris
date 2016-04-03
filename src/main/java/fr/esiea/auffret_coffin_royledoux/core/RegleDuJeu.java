@@ -1,6 +1,5 @@
 package fr.esiea.auffret_coffin_royledoux.core;
 
-import fr.esiea.auffret_coffin_royledoux.terrain.Plateau;
 
 class RegleDuJeu {
 
@@ -12,13 +11,13 @@ class RegleDuJeu {
 	
 	private void LignePleine(){
 		// TODO ligne pleine
-		for(int i = Plateau.hauteur-1; i >= 0 ; i--){
+		for(int i = Jeu.getPplateau().getHauteur()-1; i >= 0 ; i--){
 			boolean lignePleine = true;
 			
 			lignePleine = LaLigneEstEllePleine(i, lignePleine);
 			
 			if(lignePleine){
-				Jeu.score++;
+				Jeu.setScore(Jeu.getScore()+1);
 				// TODO affichage
 			}
 		}
@@ -26,8 +25,9 @@ class RegleDuJeu {
 
 	private boolean LaLigneEstEllePleine(int ligne, boolean lignePleine) {
 		// TODO Auto-generated method stub
-		for(int j = 0 ; j < Plateau.largeur ; j++){
-			if(Plateau.tableau[ligne][j] == 0){
+		int[][] tableau = Jeu.getPplateau().getTableau();
+		for(int j = 0 ; j < Jeu.getPplateau().getLargeur() ; j++){
+			if(tableau[ligne][j] == 0){
 				lignePleine = false;
 				break;
 			}
