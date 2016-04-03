@@ -10,6 +10,7 @@ import fr.esiea.auffret_coffin_royledoux.mouvement.Rotation;
 class InterfaceUtilisateur {
 	
 	InterfaceUtilisateur(final Piece piece){
+
 		new KeyListener(){
 
 			@Override
@@ -33,6 +34,7 @@ class InterfaceUtilisateur {
 					default:
 						break;
 				}
+
 			}
 
 			@Override
@@ -45,5 +47,6 @@ class InterfaceUtilisateur {
 				
 			}
 		};
+
 	}
 }

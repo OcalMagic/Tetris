@@ -10,6 +10,12 @@ public class Affiche {
 	
 	public void Affichage(){
 		frame.terrain.repaint();
+		try {
+			Thread.sleep(150);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }

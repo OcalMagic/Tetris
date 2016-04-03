@@ -6,7 +6,7 @@ import fr.esiea.auffret_coffin_royledoux.generationPiece.Piece;
 public class Deplacement {
 
 	public static void descendre(Piece p){
-		p.setPositionY(p.getPositionY()-1);
+		p.setPositionY(p.getPositionY()+1);
 		aLInterieur(p);
 	}
 	
@@ -21,6 +21,7 @@ public class Deplacement {
 	}
 	
 	public static void aLInterieur(Piece piece){
+
 		if(piece.getPositionX() < 0) { piece.setPositionX(0); }
 		if(piece.getPositionX() >= Jeu.getPplateau().getHauteur()) { piece.setPositionX(Jeu.getPplateau().getHauteur()-1); }
 		if(piece.getPositionY() < 0) { piece.setPositionY(0); }

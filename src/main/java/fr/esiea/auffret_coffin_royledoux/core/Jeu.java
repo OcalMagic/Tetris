@@ -8,6 +8,8 @@ import fr.esiea.auffret_coffin_royledoux.terrain.Plateau;
 
 public class Jeu {
 
+	Affiche a = new Affiche();
+
 	private static Plateau pplateau = new Plateau();
 	public static Piece pieceCourante;
 	public static Plateau getPplateau() {
@@ -16,20 +18,23 @@ public class Jeu {
 	
 	public Jeu(){
 		boolean gagner = true;
-		boolean etape = true;
-		boolean stop = true;
 		int score = 0;
+
+		int cpt =0;
 		
 		while(gagner){
 			
+			boolean etape = true;
+			boolean stop = true;
 			pieceCourante = PieceFactory.GenerationPiece();
-			Affiche a = new Affiche();
 
+
+			System.out.println(cpt++);
 			while(etape & stop){
-				
 				// TODO tour suivant
 				Deplacement.descendre(pieceCourante);
 				a.Affichage();
+
 				//Derniere ligne on s'arrete
 				stop = Stop(stop, pieceCourante);
 				// TODO collision
@@ -38,6 +43,7 @@ public class Jeu {
 				// TODO ecouter le clavier
 				new InterfaceUtilisateur(pieceCourante);
 				a.Affichage();
+
 			}
 			
 			// TODO regle du jeu
@@ -50,7 +56,7 @@ public class Jeu {
 	}
 	
 	private boolean Stop(boolean stop, Piece piece) {
-		if(piece.getPositionY()==21){
+		if(piece.getPositionY()==20){
 			return false;
 		}
 		return true;

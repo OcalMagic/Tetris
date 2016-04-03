@@ -3,8 +3,8 @@ package fr.esiea.auffret_coffin_royledoux.terrain;
 
 public class Plateau {
 	
-	private int hauteur = 21;
-	private int largeur = 10;
+	private int hauteur = 10;
+	private int largeur = 21;
 	private int tableau[][] = new int[hauteur][largeur];
 	
 	public int getHauteur(){
