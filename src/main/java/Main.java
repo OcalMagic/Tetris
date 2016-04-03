@@ -18,27 +18,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		//Piece p = new Barre(0, 20);
-		//Piece c = new Cube(0, 20);
-		Piece a = PieceFactory.GenerationPiece();
-		List<Piece> liste = new ArrayList<Piece>();
-		liste.add(a);
-		//p.setPositionX(0);
-		//p.setPositionY(20);
-		//p.creerBarre();
-		
-		new Printer(a.getForme());
-		Rotation r = new Rotation();
-		r.horaire(a);
-		new Printer(a.getForme());
-		r.horaire(a);
-		new Printer(a.getForme());
-		r.antiHoraire(a);
-		new Printer(a.getForme());
-		Deplacement d = new Deplacement();
-		d.descendre(a);
-		new Printer(Jeu.getPplateau().getTableau());
+
+		new Jeu();
 		
 		/*String host = "127.0.0.1";
 
