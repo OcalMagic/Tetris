@@ -34,11 +34,14 @@ Exercice Architecture:
 Exercice Design Pattern/SOLID:
 
 	FACTORY: PieceFactory.java
+		Cette classe permet de créer des pieces sans avoir à toucher au classes Piece ou ses classes filles. Cela permet de n'avoir aucuns problèmes avec ces classes.
 		
-	SOLID / SRP : Sauvegarder.java
+	SOLID / SRP : Main.java
+		Le main à une seule et unique fonction : lancer le jeu.
+		Ça permet d'être sur que seule la classe appelé est lancé.
 	
-	SOLID / OCP : Piece.java
-		
+	SOLID / OCP : Barre.java
+		Cette classe définit ce qu'est une pièce, elle ne peut se modifié mais est ouverte à l'extension.
 		
 	
 

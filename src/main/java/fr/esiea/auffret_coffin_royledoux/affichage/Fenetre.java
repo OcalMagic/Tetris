@@ -26,7 +26,7 @@ class Fenetre extends JFrame {
 		this.setLocationRelativeTo(null);
 		
 	    
-		JLabel boutonScore = new JLabel(Jeu.getScore());
+		JLabel boutonScore = new JLabel("Score : " + Jeu.getScore());
 		JButton boutonMulti = new JButton("Multijoueurs");
 		
 	    boutonMulti.addActionListener(new BoutonMultiListener());
