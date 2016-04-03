@@ -8,4 +8,8 @@ public class Affiche {
 		frame.setVisible(true);
 	}
 	
+	public void Affichage(){
+		frame.terrain.repaint();
+	}
+	
 }

@@ -3,8 +3,7 @@ import java.util.List;
 
 import fr.esiea.auffret_coffin_royledoux.affichage.Affiche;
 import fr.esiea.auffret_coffin_royledoux.affichage.Printer;
-import fr.esiea.auffret_coffin_royledoux.generationPiece.Barre;
-import fr.esiea.auffret_coffin_royledoux.generationPiece.Cube;
+import fr.esiea.auffret_coffin_royledoux.core.Jeu;
 import fr.esiea.auffret_coffin_royledoux.generationPiece.Piece;
 import fr.esiea.auffret_coffin_royledoux.generationPiece.PieceFactory;
 import fr.esiea.auffret_coffin_royledoux.mouvement.Deplacement;
@@ -16,6 +15,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		new Jeu();
 		
 		/*Piece p = new Barre(0, 20);
 		//Piece c = new Cube(0, 20);
